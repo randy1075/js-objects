@@ -258,10 +258,21 @@ var arrayOfObjects = [
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
-//function printObj (object){
-//  result objectAddition = object;
-//}
+var sumObj = {
+    a: 2,
+    b: 4,
+    result: undefined
+};
 
+function printObj (object){
+  object.result =  object.a + object.b;
+  
+  return object;
+}
+
+
+var sumObjResult = printObj(sumObj);
+console.log (sumObjResult);
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
