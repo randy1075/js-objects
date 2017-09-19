@@ -80,10 +80,10 @@ console.log(kicks.buy());
             - add a property named `size` and set it to a number value between `0` and `20`.
             - add a property named `contents` and set it to be an empty array.
 */
-var plainBox = {};
-plainBox.color = "gray";
-plainBox.size = 10;
-plainBox.contents = []; 
+    var plainBox = {};
+    plainBox.color = "gray";
+    plainBox.size = 10;
+    plainBox.contents = []; 
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -93,13 +93,13 @@ plainBox.contents = [];
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
 */
-var stockCar = {
-  model: "SuperLiteCars",
-  year: 2016,
-  automaticTransmission: false,
-  driver: null,
-  passengers: []
-};
+    var stockCar = {
+      model: "SuperLiteCars",
+      year: 2015,
+      automaticTransmission: false,
+      driver: null,
+      passengers: []
+    };
 
 /*
 
@@ -117,17 +117,18 @@ var stockCar = {
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
-var plainPerson = {};
-function buildPerson (person, nameString, age){
-  person.name = nameString;
-  person.age = age;
-  return  person;
-  buildPerson {};
-  var completePerson = plainPerson;
-  console.log (plainPerson);
-  console.log (person.name);
-  console.log (person.age);
-}
+    var plainPerson = {};
+       function buildPerson (person, nameString, age){
+           person.name = nameString;
+           person.age = age;
+           return  person;
+         }
+
+    var completePerson = buildPerson (plainPerson, "Sam", 32);
+        console.log (completePerson);
+        console.log (completePerson.name);
+        console.log (completePerson.age);
+
 /*
 7. Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
@@ -204,10 +205,17 @@ var arrayOfObjects = [
     total: "194.33"
   }
 ];
-function printOrders (orders){
-  return 
-}
-
+  function printOrders (orders){
+    for (var i = 0; i < orders.length; i++){
+       console.log ("=====");
+       console.log ("id: " + i);
+       console.log("purchase date: " + orders[i].date);
+       console.log("purchase total: " + orders[i].total);
+ 
+      }
+                                        
+    }
+   printOrders(arrayOfObjects);
 /*
 8. Addition with an object
    Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. 
@@ -220,8 +228,20 @@ function printOrders (orders){
         Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
         to inspect your results.
 */
+    var sumObj = {
+      a: 2,
+      b: 4,
+      result: undefined
+    };
+    
+      
+    function objectAddition (object){
+      object.result = object.a + object.b;
+      return object;
+      }
 
-
+      var sumObjResult = objectAddition(sumObj);
+      console.log (sumObjResult);
 /*
 9. Print sum function and add as new key-value
    Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
@@ -238,7 +258,9 @@ function printOrders (orders){
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
-
+//function printObj (object){
+//  result objectAddition = object;
+//}
 
 /*
 10. Putting stuff in `plainBox`
