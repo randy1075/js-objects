@@ -258,21 +258,24 @@ var arrayOfObjects = [
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
-var sumObj = {
-    a: 2,
-    b: 4,
-    result: undefined
+var sumObj2 = {
+    a: 10,
+    b: 67,
+    result: 77
 };
 
 function printObj (object){
-  object.result =  object.a + object.b;
-  
+  //object.result =  object.a + object.b;
+  console.log(object.a + " + " + object.b + " = " + object.result);
+  object.output = object.a + " + " + object.b + " = " + object.result; 
   return object;
 }
 
+sumObj2.a = 80;
+printObj (sumObj2);
 
-var sumObjResult = printObj(sumObj);
-console.log (sumObjResult);
+//var sumObjResult = printObj(sumObj);
+//console.log printObj(sumObjResult);
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -282,8 +285,16 @@ console.log (sumObjResult);
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+function putInPlainBox (object){
+  for (var i = 0; i < 10; i++){
+    object.contents[i] = i*5;
+  }
 
+return object;
+}
 
+var plainBoxResult = putInPlainBox(plainBox);
+console.log (plainBoxResult);
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
